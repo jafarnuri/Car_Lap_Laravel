@@ -22,23 +22,41 @@
                 <h2>Welcome Back</h2>
                 <p>Please log in using your personal information to stay connected with us.</p>
             </div>
+
             <div class="form-content">
                 <h2>LOGIN</h2>
-                <form action=" method=" POST">
+                <form action="{{ route('login_user') }}" method="POST">
+                    @csrf
+
+                    <!-- Email Sahəsi -->
                     <div class="input-field">
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" value="{{ old('email') }}" required>
                         <label>Email</label>
+                        @error('email')
+                            <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
+
+                    <!-- Şifrə Sahəsi -->
                     <div class="input-field">
                         <input type="password" name="password" required>
                         <label>Password</label>
+                        @error('password')
+                            <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+
+                    <!-- Şifrəni unutmuşam linki -->
+                    <a href="" class="forgot-pass-link">Forgot password?</a>
+
+                    <!-- Giriş düyməsi -->
                     <button type="submit">Log In</button>
                 </form>
+
+
                 <div class="bottom-link">
                     Don't have an account?
-                    <a href="" id="signup-link">Signup</a>
+                    <a href="{{route('register')}}" id="signup-link">Signup</a>
                 </div>
             </div>
         </div>
