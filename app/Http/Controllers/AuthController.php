@@ -32,15 +32,25 @@ class AuthController extends Controller
 
         // Auth::attempt ilə istifadəçini yoxlayırıq
         if (Auth::attempt($credentials, $request->has('remember'))) {
-            // Əgər giriş uğurludursa, dashboard-a yönləndiririk
-            return redirect()->route('home')->with('success', 'Giriş uğurla tamamlandı!');
+            // İstifadəçini əldə edirik
+            $user = Auth::user();
+
+            // İstifadəçinin rolu əsasında yönləndirmə
+            if ($user->role === 'admin') {
+                return redirect()->route('admin.home')->with('success', 'Admin panelinə xoş gəldiniz!');
+            } elseif ($user->role === 'user') {
+                return redirect()->route('home')->with('success', 'Giriş uğurla tamamlandı!');
+            }
+
+
         }
 
-        // Əgər səhvdirsə, geri qaytarırıq və səhv mesajını göstəririk
+        // Əgər giriş uğursuz olarsa, səhv mesajını qaytarırıq
         return back()->withErrors([
             'email' => 'Email və ya şifrə yanlışdır.',
         ]);
     }
+
     public function logout()
     {
         // İstifadəçini çıxarır
