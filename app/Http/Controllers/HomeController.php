@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\CarRequest;
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +25,8 @@ class HomeController extends Controller
     }
     public function cars()
     {
-        return view('frond.cars');
+        $cars = Car::all();
+        return view('frond.cars', compact('cars'));
     }
     public function blog()
     {
@@ -43,5 +45,10 @@ class HomeController extends Controller
     public function register()
     {
         return view('Auth.register');
+    }
+    public function car_single($id)
+    {
+        $cars = Car::findOrFail($id);
+        return view('frond.car-single', compact('cars'));
     }
 }

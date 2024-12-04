@@ -11,22 +11,35 @@
       <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
         aria-controls="form-elements">
         <i class="icon-columns menu-icon"></i>
-        <span class="menu-title">Ayarlar</span>
+        <span class="menu-title">Settings</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="form-elements">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"><a class="nav-link" href="">Öncəliklər</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.services_show')}}">Service</a>
+          </li>
         </ul>
       </div>
       <div class="collapse" id="form-elements">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"><a class="nav-link" href="">Bağlantı Məlumatları</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.about_show')}}">About</a>
+          </li>
         </ul>
       </div>
       <div class="collapse" id="form-elements">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"><a class="nav-link" href="">Sosial Şəbəkə</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.social_show')}}">Social Network</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse" id="form-elements">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.social_show')}}">Communication</a>
+          </li>
         </ul>
       </div>
 
@@ -35,22 +48,18 @@
     <li class="nav-item">
       <a class="nav-link" href="">
         <i class="fa fa-users"></i>
-        <span class="menu-title">Istifadeciler</span>
+        <span class="menu-title">Users</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="{{route('admin.about')}}">
-        <i class="fa fa-info"></i>
-        <span class="menu-title">About</span>
-      </a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link" href="">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Kateqoriyalar</span>
+        <i class="fa fa-users"></i>
+        <span class="menu-title">Contact</span>
       </a>
     </li>
+
+
 
     <li class="nav-item">
       <a class="nav-link" href="{{route('admin.car')}}">
@@ -60,33 +69,11 @@
     </li>
 
 
-    <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Şərhlər</span>
-      </a>
-    </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Mehsullar</span>
-      </a>
-    </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Rengler</span>
-      </a>
-    </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="">
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Size</span>
-      </a>
-    </li>
+
+
 
 
   </ul>

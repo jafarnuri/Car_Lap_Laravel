@@ -50,24 +50,33 @@
                 </div>
             </div>
             <div class="col-md-8 block-9 mb-md-5">
-                <form action="#" class="bg-light p-5 contact-form">
+
+
+                <form action="{{route('send_message')}}" method="POST" class="bg-light p-5 contact-form">
+                    @csrf
+
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="7" class="form-control"
+                        <textarea name="message" id="" cols="30" rows="7" class="form-control"
                             placeholder="Message"></textarea>
                     </div>
+                    <div class="ln_solid"></div>
                     <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                            <button type="submit" name="" class="btn btn-success">Send</button>
+                        </div>
                     </div>
                 </form>
+
+
 
             </div>
         </div>

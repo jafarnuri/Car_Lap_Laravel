@@ -10,25 +10,22 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
-    public function about()
-    {
-        return view('admin.about_update');
-    }
+
     public function car()
     {
         $cars = Car::all();
-        return view('admin.car')->with('cars', $cars);
+        return view('admin.cars.car')->with('cars', $cars);
     }
 
     public function car_create()
     {
-        return view('admin.car_create');
+        return view('admin.cars.car_create');
     }
 
     public function car_update($id)
     {
         $car = Car::findOrFail($id);
-        return view('admin.car_update')->with('car', $car);
+        return view('admin.cars.car_update')->with('car', $car);
     }
 
     public function contact()

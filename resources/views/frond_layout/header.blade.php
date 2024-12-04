@@ -24,6 +24,15 @@
                     <!-- İstifadəçi daxil olubsa başqa bir məzmun göstərilə bilər -->
                     <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Logout</a></li>
                 @endauth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">{{__('msg.language')}}</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+                        <a class="dropdown-item" href=""></a>
+
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

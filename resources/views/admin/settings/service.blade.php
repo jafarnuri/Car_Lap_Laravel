@@ -10,7 +10,9 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>banka Düzenleme </h2>
+                        <br>
+                        <br>
+                        <h2>Service </h2>
 
                         <div class="clearfix"></div>
                     </div>
@@ -32,34 +34,31 @@
                             @csrf
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Banka Ad <span
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Title <span
                                         class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="first-name" name="bank_ad" value=""
-                                        placeholder="Banka adını giriniz" required="required"
+                                    <input type="text" id="first-name" name="" value="" required="required"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Banka IBAN
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Description
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="first-name" name="bank_kart_kodu" value=""
-                                        placeholder="Banka IBAN giriniz" required="required"
+                                    <input type="text" id="first-name" name="" value="" required="required"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Banka Hesap Ad
-                                    Soyad <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Icon
+                                    <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="first-name" name="bank_adsoyad" value=""
-                                        placeholder="Ad Soyad Giriniz" required="required"
+                                    <input type="text" id="first-name" name="" value="" required="required"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
@@ -67,7 +66,7 @@
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <button type="submit" name="" class="btn btn-success">Guncelle</button>
+                                    <button type="submit" name="" class="btn btn-success">Update</button>
                                 </div>
                             </div>
 

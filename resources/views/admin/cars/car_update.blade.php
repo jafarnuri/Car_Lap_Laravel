@@ -10,6 +10,8 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
+            <br>
+            <br>
             <h2>Cars Update</h2>
 
             <div class="clearfix"></div>
@@ -23,16 +25,12 @@
 
         </div>
       @endif
-
-
-            <!-- / => en kök dizine çık ... ../ bir üst dizine çık -->
-            <form action="" method="POST" id="demo-form2" enctype="multipart/form-data" data-parsley-validate
-              class="form-horizontal form-label-left">
+            <form action="{{ route('admin.edit', $car->id) }}" method="POST" id="demo-form2"
+              enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
               @csrf
-
+              @method('PUT')
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Make <span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Make
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="make" value="{{$car->make}}"
@@ -41,8 +39,7 @@
               </div>
 
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Model <span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Model
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="model" value="{{$car->model}}"
@@ -51,8 +48,7 @@
               </div>
 
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Price_per_day <span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Price_per_day
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="price_per_day" value="{{$car->price_per_day}}"
@@ -60,8 +56,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Year <span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Year
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="year" value="{{$car->year}}"
@@ -69,8 +64,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Mileage<span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Mileage
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="mileage" value="{{$car->mileage}}"
@@ -78,8 +72,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Transmission <span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Transmission
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="transmission" value="{{$car->transmission}}"
@@ -87,8 +80,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Seats<span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Seats
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="seats" value="{{$car->seats}}"
@@ -96,8 +88,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Luggage<span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Luggage
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="luggage" value="{{$car->luggage}}"
@@ -105,8 +96,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fuel<span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fuel
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="text" id="first-name" name="fuel" value="{{$car->fuel}}"
@@ -114,38 +104,38 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description<span
-                    class="required">*</span></label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <textarea id="description" name="description" value="{{$car->description}}" class=" form-control"
-                    placeholder="Mətni buraya daxil edin..."></textarea>
+                  <textarea id="description" name="description" class=" form-control">{{$car->description}}</textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="status">Status<span
-                    class="required">*</span></label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="status">
+                  Status
+                </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select id="status" name="status" class="form-control col-md-7 col-xs-12">
-                    <option value="{{$car->status}}" disabled selected>{{$car->status}}</option>
-                    <!-- Default seçimin göstərilməsi -->
-                    <option value="active">Aktiv</option>
-                    <option value="inactive">Deaktiv</option>
-                    <option value="pending">Gözləmə</option>
+                    <option value="active" {{ $car->status == 'active' ? 'selected' : '' }}>Aktiv</option>
+                    <option value="inactive" {{ $car->status == 'inactive' ? 'selected' : '' }}>Deaktiv</option>
+                    <option value="pending" {{ $car->status == 'pending' ? 'selected' : '' }}>Gözləmə</option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Image<span
-                    class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Image
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="file" id="first-name" name="image" class="form-control col-md-7 col-xs-12">
                 </div>
               </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <img src=" {{ Storage::url($car->image) }}" alt="Car Image">
-              </div>
+
+              @if($car->image)
+          <div class="col-md-6 col-sm-6 col-xs-12">
+          <img src="{{ Storage::url($car->image) }}" alt="Car Image" style="max-width: 100%; height: auto;">
+          </div>
+        @endif
+
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

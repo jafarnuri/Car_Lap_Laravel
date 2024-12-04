@@ -10,6 +10,8 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
+            <br>
+            <br>
             <h2>Cars</h2>
 
             <div class="clearfix"></div>
@@ -79,11 +81,12 @@
             <td>{{$car->status}}</td>
             <td><img src="{{ Storage::url($car->image) }}" alt="Car Image"> </td>
             <td>
-            <center><a href="{{route('admin.car_update', ['id' => $car->id])}}"><button
+            <center><a href="{{route('admin.car-update', ['id' => $car->id])}}"><button
                 class="btn btn-primary btn-xs"><i></i></button></a></center>
             </td>
             <td>
-            <center><a href=""><button class="btn btn-danger btn-xs"><i></i></button></a>
+            <center><a href="{{ route('admin.car_delete', $car->id) }}"><button
+                class="btn btn-danger btn-xs"><i></i></button></a>
             </center>
             </td>
           </tr>

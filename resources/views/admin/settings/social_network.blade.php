@@ -10,7 +10,9 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>About Update</h2>
+                        <br>
+                        <br>
+                        <h2>Social Network</h2>
 
                         <div class="clearfix"></div>
                     </div>
@@ -32,31 +34,31 @@
                             @csrf
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Title <span
-                                        class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Instagram
+                                    <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="first-name" name="title" value="" placeholder=""
-                                        required="required" class="form-control col-md-7 col-xs-12">
+                                    <input type="text" id="first-name" name="title" value="" required="required"
+                                        class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Content
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Facebook
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="first-name" name="content" value="" placeholder=""
-                                        required="required" class="form-control col-md-7 col-xs-12">
+                                    <input type="text" id="first-name" name="content" value="" required="required"
+                                        class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Image
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Twitter
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="file" id="first-name" name="image" value="" required="required"
+                                    <input type="text" id="first-name" name="content" value="" required="required"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>

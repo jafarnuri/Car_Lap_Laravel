@@ -13,7 +13,7 @@ class CarRequest extends FormRequest
 
     public function rules()
     {
-        return [
+        $rules = [
             'make' => 'required|string|max:255',
             'model' => 'required|string|max:255',
             'price_per_day' => 'required|numeric|min:0',  // Numeric olmalı
@@ -27,6 +27,25 @@ class CarRequest extends FormRequest
             'status' => 'required|in:active,inactive,pending',
             'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048', // şəkil formatı
         ];
+
+        // `update` əməliyyatı üçün "required" olmayan validasiya
+        if ($this->isMethod('put')) {
+            // "required" olmayanları `sometimes` olaraq təyin edirik
+            $rules['make'] = 'sometimes|string|max:255';
+            $rules['model'] = 'sometimes|string|max:255';
+            $rules['price_per_day'] = 'sometimes|numeric|min:0';
+            $rules['year'] = 'sometimes|numeric|digits:4';
+            $rules['mileage'] = 'sometimes|numeric|min:0';
+            $rules['transmission'] = 'sometimes|string|max:50';
+            $rules['seats'] = 'sometimes|numeric|min:1';
+            $rules['luggage'] = 'sometimes|integer|min:0';
+            $rules['fuel'] = 'sometimes|string|max:50';
+            $rules['description'] = 'sometimes|string|max:1000';
+            $rules['status'] = 'sometimes|in:active,inactive,pending';
+            $rules['image'] = 'sometimes|image|mimes:jpg,jpeg,png,gif|max:2048';
+        }
+
+        return $rules;
     }
 
     public function messages()

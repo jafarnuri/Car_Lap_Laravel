@@ -10,11 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('sosial_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('title'); // Xidmətin adı
-            $table->text('description'); // Xidmətin təsviri
-            $table->string('icon')->nullable(); // İkona üçün sahə
+            $table->string('insatgram');
+            $table->string('facebook');
+            $table->string('twitter');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('sosial_settings');
     }
 };

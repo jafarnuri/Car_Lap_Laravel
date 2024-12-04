@@ -10,14 +10,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>banka Listeleme</h2>
+                        <br>
+                        <br>
+                        <h2>Contact Message</h2>
 
                         <div class="clearfix"></div>
 
-                        <div align="right">
-                            <a href=""><button class="btn btn-success btn-xs"> Yeni Ekle</button></a>
-
-                        </div>
                     </div>
                     <div class="x_content">
 
@@ -38,15 +36,16 @@
                             cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>S.No</th>
-                                    <th>Ad</th>
-                                    <th>Banka IBAN</th>
-                                    <th>Banka Hesap Ad Soyad</th>
+                                    <th>Nomber</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
                                     <th>
-                                        <center>Yenile</center>
+                                        <center></center>
                                     </th>
                                     <th>
-                                        <center>Sil</center>
+                                        <center>Delete</center>
                                     </th>
                                 </tr>
                             </thead>
