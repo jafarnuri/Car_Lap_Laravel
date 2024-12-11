@@ -8,7 +8,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">{{__('msg.home')}}</a></li>
                 <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="{{route(name: 'service')}}" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="{{route(name: 'pricing')}}" class="nav-link">Pricing</a></li>
@@ -28,8 +28,11 @@
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">{{__('msg.language')}}</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-
-                        <a class="dropdown-item" href=""></a>
+                        @foreach(config('localization.locales') as $locale)
+                            <a class="dropdown-item" href="{{ route('localization', $locale) }}">
+                                {{ strtoupper($locale) }}
+                            </a>
+                        @endforeach
 
                     </div>
                 </li>
